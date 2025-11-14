@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .metamask-font {
+    font-family: "Arial Black", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.5);
+  border-radius: 10px;
+  transition: background 0.2s ease;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.8);
+  background-clip: padding-box;
+}
+
+/* Enhanced dark mode scrollbar */
+.custom-scrollbar.dark-scrollbar {
+  scrollbar-color: rgba(139, 92, 246, 0.6) rgba(31, 41, 55, 0.3);
+}
+
+.custom-scrollbar.dark-scrollbar::-webkit-scrollbar-track {
+  background: rgba(31, 41, 55, 0.3);
+  border-radius: 10px;
+}
+
+.custom-scrollbar.dark-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.6);
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  border: 2px solid rgba(31, 41, 55, 0.3);
+  background-clip: padding-box;
+}
+
+.custom-scrollbar.dark-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(167, 139, 250, 0.8);
+  border-color: rgba(31, 41, 55, 0.5);
+  background-clip: padding-box;
+}
+
+/* Print-only resume layout: isolate resume preview and format to A4 */
+@media print {
+  html, body {
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Hide everything except the resume container */
+  body * {
+    visibility: hidden;
+  }
+  #resume-print, #resume-print * {
+    visibility: visible;
+  }
+  #resume-print {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 210mm;
+    min-height: 297mm;
+    padding: 16mm;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  /* Avoid page break in headers */
+  #resume-print h1, #resume-print h2 {
+    page-break-after: avoid;
+  }
+  /* Respect page breaks */
+  .page-break {
+    break-after: page;
+    page-break-after: always;
+  }
+}

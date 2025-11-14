@@ -1,0 +1,261 @@
+export interface FAQItem {
+  title: string;
+  description: string;
+  steps: string[];
+  intro?: string;
+  resourceTypes?: {
+    intro: string;
+    items: string[];
+  };
+  relatedLinks?: {
+    text: string;
+    href: string;
+  }[];
+  additionalInfo?: string;
+}
+
+export const learnerFaqs: FAQItem[] = [
+  {
+    title: 'How to Enroll in Courses',
+    description: 'Browse our course catalog, view course details, and enroll to start learning. Track your progress and earn certificates.',
+    intro: 'This article explains how to browse, view, and enroll in courses on VP Learning. Once enrolled, you can access your courses anytime and track your learning progress.',
+    steps: [
+      'Navigate to the "Courses" page from the main navigation menu',
+      'Browse through available courses or use the search bar to find specific topics',
+      'Click on any course card to view detailed information including curriculum, instructor, and pricing',
+      'Review the course description, lessons, and what you\'ll learn',
+      'Click the "Enroll" or "View Details" button on the course page',
+      'If the course is paid, complete the payment process',
+      'Once enrolled, access your course from the "Dashboard" or "Courses" page',
+      'Start learning by clicking on lessons and track your progress automatically',
+    ],
+    relatedLinks: [
+      { text: 'How to Track Your Learning Progress', href: '/support/learner/track-your-learning-progress' },
+      { text: 'How to Access Course Resources', href: '/support/learner/how-to-access-course-resources' },
+    ],
+  },
+  {
+    title: 'Using Mock Interview Practice',
+    description: 'Practice Technical, Behavioral, and Leadership interviews with AI-powered feedback. Record your answers and review them later.',
+    intro: 'VP Learning offers AI-powered mock interview practice to help you prepare for real interviews. Practice different types of interviews and get instant feedback on your performance.',
+    steps: [
+      'Go to "Mock Interview" from the main navigation menu',
+      'Choose your interview type: Technical, Behavioral, or Leadership',
+      'Click "Start Interview" to begin a practice session',
+      'Read each question carefully and prepare your answer',
+      'Click the record button to start recording your response',
+      'Speak clearly and answer the question completely',
+      'Stop recording when finished with your answer',
+      'Review your recorded answer and listen to it',
+      'Get instant AI-powered feedback on your performance',
+      'Track your progress across multiple practice sessions',
+    ],
+  },
+  {
+    title: 'Track Your Learning Progress',
+    description: 'View your dashboard to see enrolled courses, achievements, learning goals, and activity history all in one place.',
+    intro: 'Your dashboard provides a comprehensive overview of your learning journey on VP Learning. Monitor your progress, achievements, and stay motivated.',
+    steps: [
+      'Click on your profile icon in the header and select "Dashboard"',
+      'View your enrolled courses with progress percentages',
+      'Check your recent learning activities and history',
+      'Review your learning goals and set new ones',
+      'See your achievement badges and certificates earned',
+      'Monitor your consecutive learning days streak',
+      'Track overall statistics like courses completed and hours learned',
+      'Use the dashboard to identify areas where you need more practice',
+    ],
+  },
+  {
+    title: 'Soft Skills Development',
+    description: 'Master Communication, Leadership, Time Management, Problem Solving, Emotional Intelligence, and Adaptability through interactive modules.',
+    intro: 'Develop essential soft skills through our comprehensive modules. Each skill area includes interactive lessons, activities, and assessments.',
+    steps: [
+      'Navigate to "Soft Skills" from the main menu',
+      'Browse available soft skill modules: Communication, Leadership, Time Management, Problem Solving, Emotional Intelligence, and Adaptability',
+      'Select a skill you want to develop',
+      'Read the introduction and overview of the skill',
+      'Complete interactive modules step by step',
+      'Engage with activities and exercises provided',
+      'Track your progress through each module',
+      'Earn badges and certificates upon completion',
+      'Apply what you learn in real-world scenarios',
+    ],
+  },
+  {
+    title: 'Build Your Resume',
+    description: 'Create professional resumes with our AI-powered resume builder. Get suggestions and optimize your content.',
+    intro: 'Create a professional resume using our AI-powered resume builder. Get real-time suggestions and choose from professional templates.',
+    steps: [
+      'Go to "Resume Builder" from the secondary navigation menu',
+      'Click "Create New Resume" or edit an existing one',
+      'Fill in your personal information (name, contact details, etc.)',
+      'Add your work experience with job titles, companies, and descriptions',
+      'Include your education history and qualifications',
+      'Add relevant skills and certifications',
+      'Use AI suggestions to improve your resume content',
+      'Choose a professional template that suits your industry',
+      'Review and edit your resume sections',
+      'Download your resume as a PDF when ready',
+    ],
+  },
+  {
+    title: 'ATS Resume Checker',
+    description: 'Check how your resume performs with Applicant Tracking Systems. Get AI-powered scores and improvement suggestions.',
+    intro: 'Ensure your resume passes through Applicant Tracking Systems (ATS) used by most employers. Get detailed feedback and improvement suggestions.',
+    steps: [
+      'Navigate to "ATS Checker" from the secondary navigation menu',
+      'Upload your resume file (PDF or DOCX format)',
+      'Wait for the AI to analyze your resume',
+      'Review your ATS compatibility score',
+      'Read detailed feedback on each section of your resume',
+      'See suggestions for keywords and formatting improvements',
+      'Check which sections need optimization',
+      'Make improvements based on the recommendations',
+      'Re-upload your updated resume to check the new score',
+      'Use the improved resume for your job applications',
+    ],
+  },
+  {
+    title: 'Career Path Guidance',
+    description: 'Get personalized career recommendations and explore different career paths based on your skills and interests.',
+    intro: 'Discover the best career paths for your skills and interests. Get personalized recommendations and learning paths to achieve your career goals.',
+    steps: [
+      'Click on "Career Path" from the secondary navigation menu',
+      'Answer questions about your skills, interests, and career goals',
+      'Provide information about your current experience level',
+      'Review personalized career path recommendations',
+      'Explore different career options suggested for you',
+      'Read detailed information about each career path',
+      'See required skills and qualifications for each path',
+      'Get learning recommendations to achieve your career goals',
+      'Save your preferred career paths for future reference',
+    ],
+  },
+  {
+    title: 'AI Assistant - Ask Anything',
+    description: 'Get instant help from our AI assistant powered by Gemini. Ask questions about courses, features, or learning strategies.',
+    intro: 'Get instant answers to your questions 24/7 using our AI assistant. Powered by Google Gemini, it can help with courses, features, and learning strategies.',
+    steps: [
+      'Click on "Ask Anything" from the secondary navigation menu',
+      'Type your question in the chat input field',
+      'Press Enter or click the send button',
+      'Wait for the AI assistant to process your question',
+      'Read the detailed response provided',
+      'Ask follow-up questions if needed',
+      'Use the AI for help with course content, platform features, or learning advice',
+      'Get instant answers 24/7 without waiting for support',
+    ],
+  },
+];
+
+export const instructorFaqs: FAQItem[] = [
+  {
+    title: 'Create Your First Course',
+    description: 'Learn how to create and upload courses on VP Learning. Add lessons, set pricing, and publish your content.',
+    intro: 'Creating your first course on VP Learning is straightforward. Follow these steps to build, organize, and publish your course content.',
+    steps: [
+      'Log in to your instructor account',
+      'Navigate to "Instructor Dashboard" from your profile menu',
+      'Click the "Create New Course" button',
+      'Fill in the basic course information: title, description, and category',
+      'Select the difficulty level (Beginner, Intermediate, or Advanced)',
+      'Upload a course thumbnail image that represents your course',
+      'Add lessons by clicking "Add Lesson" for each module',
+      'For each lesson, provide: title, description, video URL, and duration',
+      'Add resources like PDFs, links, or downloadable files to lessons',
+      'Set your course price (can be free or paid)',
+      'Review all course content and information',
+      'Toggle "Publish" to make your course available to students',
+      'Click "Save Course" to finalize your creation',
+    ],
+  },
+  {
+    title: 'Manage Your Courses',
+    description: 'Access your instructor dashboard to view all courses, track performance, manage students, and monitor revenue.',
+    intro: 'Your instructor dashboard is your command center for managing all your courses. Monitor performance, edit content, and track your success.',
+    steps: [
+      'Go to "Instructor Dashboard" from your profile menu',
+      'View all your courses in a grid layout',
+      'See course status: Published or Draft',
+      'Check course statistics: students enrolled, revenue, and ratings',
+      'Click "Edit" on any course to modify its content',
+      'Use "Publish/Unpublish" toggle to control course visibility',
+      'Delete courses you no longer want using the delete button',
+      'Monitor total courses created and published count',
+      'Track total revenue and student enrollments',
+      'Review individual course performance metrics',
+    ],
+  },
+  {
+    title: 'Course Quality Guidelines',
+    description: 'Review best practices for creating engaging courses. Learn about video quality, content structure, and student engagement.',
+    intro: 'Follow these quality guidelines to create courses that students love. High-quality content leads to better reviews and more enrollments.',
+    steps: [
+      'Ensure video quality is at least 720p HD resolution',
+      'Use clear audio with minimal background noise',
+      'Structure your course with logical sections and lessons',
+      'Provide clear learning objectives for each module',
+      'Include practical examples and real-world applications',
+      'Add downloadable resources to enhance learning',
+      'Keep lessons concise (10-20 minutes recommended)',
+      'Use engaging visuals and graphics where appropriate',
+      'Include quizzes or assignments to test understanding',
+      'Respond promptly to student questions and feedback',
+      'Update course content regularly to keep it current',
+    ],
+  },
+  {
+    title: 'Upload Course Content',
+    description: 'Add video lessons, resources, and materials to your courses. Set lesson duration and organize your curriculum effectively.',
+    intro: 'Learn how to add and organize course content effectively. Well-structured content helps students learn better and stay engaged.',
+    steps: [
+      'Open your course in edit mode from the instructor dashboard',
+      'Scroll to the "Lessons" section',
+      'Click "Add Lesson" to create a new lesson',
+      'Enter the lesson title and description',
+      'Paste your video URL (YouTube, Vimeo, or direct link)',
+      'Set the lesson duration in minutes',
+      'Add resources by uploading files or providing links',
+      'Organize lessons in the order you want students to learn',
+      'Use drag-and-drop to reorder lessons if needed',
+      'Save your changes after adding all content',
+      'Preview your course to ensure everything displays correctly',
+    ],
+  },
+  {
+    title: 'Pricing and Publishing',
+    description: 'Set course prices, choose between free or paid courses, and learn when to publish your content for maximum visibility.',
+    intro: 'Setting the right price and publishing strategy can significantly impact your course success. Learn when and how to publish your courses.',
+    steps: [
+      'In the course creation/edit page, find the "Pricing" section',
+      'Enter your desired price in USD (set to $0 for free courses)',
+      'Consider market rates and course value when pricing',
+      'Review your course content before publishing',
+      'Ensure all lessons have videos and descriptions',
+      'Check that your course thumbnail is uploaded',
+      'Toggle the "Publish" switch to make your course live',
+      'Unpublish if you need to make major changes',
+      'Monitor student feedback after publishing',
+      'Adjust pricing if needed based on market response',
+    ],
+  },
+  {
+    title: 'Track Course Performance',
+    description: 'Monitor student enrollments, course ratings, revenue, and engagement metrics through your instructor dashboard.',
+    intro: 'Understanding your course performance helps you improve content and grow your instructor business. Monitor key metrics regularly.',
+    steps: [
+      'Access your "Instructor Dashboard"',
+      'View the statistics overview at the top',
+      'Check total courses created and published count',
+      'Monitor total revenue from course sales',
+      'See total students enrolled across all courses',
+      'Click on individual courses to see detailed metrics',
+      'Review student enrollment trends over time',
+      'Check course ratings and reviews from students',
+      'Analyze which courses perform best',
+      'Use insights to improve future course content',
+    ],
+  },
+];
+
